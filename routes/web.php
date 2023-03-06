@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//call product controllers
+use App\Http\Controllers\ProductController;
+
+
+Route::post('/product',[ProductController::class,'store']); 
+
 Route::get('/', function () {
     return view('welcome');
 });
